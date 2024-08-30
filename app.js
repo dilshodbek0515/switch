@@ -288,58 +288,75 @@
 
 // 9-masala
 
-let month = "mart";
-let day = 31;
+// let month = "yanvar";
+// let day = 30;
 
-switch (month) {
-    case "yanvar":
-        day === 31
-        console.log(day + 1);
-        break;
-    case "fevral":
-        day === 28
-        console.log(day + 1);
-        break;
-    case "mart":
-        day === 31
-        console.log(day + 1);
-        break;
-    case "april":
-        day === 30
-        console.log(day + 1);
-        break;
-    case "may":
-        day === 31
-        console.log(day + 1);
-        break;
-    case "iyun":
-        day === 30
-        console.log(day + 1);
-        break;
-    case "iyul":
-        day === 31
-        console.log(day + 1);
-        break;
-    case "avgust":
-        day === 31
-        console.log(day + 1);
-        break;
-    case "sentabr":
-        day === 30
-        console.log(day + 1);
-        break;
-    case "oktobr":
-        day === 31
-        console.log(day + 1);
-        break;
-    case "noyabr":
-        day === 30
-        console.log(day + 1);
-        break;
-    case "dekabr":
-        day === 31
-        console.log(day + 1);
-        break;
-    default:
-        console.log("Berilgan sanani kiriting");
+// switch (month) {
+//     case "yanvar":
+//         day === 31
+//         console.log(day + 1);
+//         break;
+//     case "fevral":
+//         day === 28
+//         console.log(day + 1);
+//         break;
+//     case "mart":
+//         day === 31
+//         console.log(day + 1);
+//         break;
+//     case "april":
+//         day === 30
+//         console.log(day + 1);
+//         break;
+//     case "may":
+//         day === 31
+//         console.log(day + 1);
+//         break;
+//     case "iyun":
+//         day === 30
+//         console.log(day + 1);
+//         break;
+//     case "iyul":
+//         day === 31
+//         console.log(day + 1);
+//         break;
+//     case "avgust":
+//         day === 31
+//         console.log(day + 1);
+//         break;
+//     case "sentabr":
+//         day === 30
+//         console.log(day + 1);
+//         break;
+//     case "oktobr":
+//         day === 31
+//         console.log(day + 1);
+//         break;
+//     case "noyabr":
+//         day === 30
+//         console.log(day + 1);
+//         break;
+//     case "dekabr":
+//         day === 31
+//         console.log(day + 1);
+//         break;
+//     default:
+//         console.log("xato");
+// }
+
+{
+    function updateClock() {
+        const now = new Date();
+        const date = now.getFullYear() + '.' +
+            String(now.getMonth() + 1).padStart(2, '0') + '.' +
+            String(now.getDate()).padStart(2, '0');
+        const time = String(now.getHours()).padStart(2, '0') + ':' +
+            String(now.getMinutes()).padStart(2, '0') + ':' +
+            String(now.getSeconds()).padStart(2, '0');
+
+        const dateTime = date + " " + time;
+        document.getElementById('soat').textContent = dateTime;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
 }
